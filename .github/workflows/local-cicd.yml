@@ -14,9 +14,6 @@ jobs:
       - name: Stop previous container (if any)
         shell: powershell
         run: |
-          # $name = "angular-nginx"
-          # $exists = docker ps -a --format '{{.Names}}' | findstr /I "^$name$"
-          # if ($LASTEXITCODE -eq 0) { docker rm -f $name }
           docker rm -f angular-nginx 2>$null | Out-Null
 
       - name: Build image
